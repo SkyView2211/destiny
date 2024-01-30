@@ -14,60 +14,61 @@ firebase.initializeApp(firebaseConfig);
 // Set database variable
 var database = firebase.database();
 
+// Create an array to store products
 var productsArray = [
     {
         itemname: "Aloo Gobi",
         itemdisc: "A vegetarian dish made with potatoes, cauliflower, and Indian spices",
-        itemprice: 169.99,
+        itemprice: 19.99,
         itemimage: "https://th.bing.com/th/id/OIG.QRV27LfIec36F2isdZLz?w=1024&h=1024&rs=1&pid=ImgDetMain",
         uniqueid: 1,
     },
     {
         itemname: "Palak paneer",
         itemdisc: "A vegetarian dish made with spinach and paneer (a type of Indian cheese) in a creamy tomato-based sauce",
-        itemprice: 189.99,
+        itemprice: 29.99,
         itemimage: "https://th.bing.com/th/id/OIG.77vZaClLYyP.aRKOqGMF?w=1024&h=1024&rs=1&pid=ImgDetMain",
         uniqueid: 2,
     },
     {
         itemname: "Chicken tikka masala",
         itemdisc: "A popular chicken dish that is marinated in yogurt and spices, then grilled and served in a creamy tomato-based sauce",
-        itemprice: 229.99,
+        itemprice: 29.99,
         itemimage: "https://th.bing.com/th/id/OIG..BbUPyf2G0RoBmolM8d7?pid=ImgGn",
         uniqueid: 3,
     },
     {
         itemname: "Biryani",
         itemdisc: "A mixed rice dish made with Indian spices, meat, and vegetables",
-        itemprice: 289.99,
+        itemprice: 29.99,
         itemimage: "https://th.bing.com/th/id/OIG.nz_xW03fUrQTC05qEZKC?pid=ImgGn",
         uniqueid: 4,
     },
     {
         itemname: "Butter chicken",
         itemdisc: "A creamy and mildly spiced chicken dish that is marinated in yogurt and spices",
-        itemprice: 249.99,
+        itemprice: 29.99,
         itemimage: "https://th.bing.com/th/id/OIG.bKdaJknwViZXPnatJuC6?w=1024&h=1024&rs=1&pid=ImgDetMain",
         uniqueid: 5,
     },
     {
         itemname: "Samosa",
         itemdisc: "A deep-fried or baked pastry stuffed with spiced potatoes, peas, and sometimes meat",
-        itemprice: 49.99,
+        itemprice: 29.99,
         itemimage: "https://th.bing.com/th/id/OIG.VAN8iABCyp3JtgB3vlt9?w=1024&h=1024&rs=1&pid=ImgDetMain",
         uniqueid: 6,
     },
     {
         itemname: "Dal makhani",
         itemdisc: "A vegetarian dish made with black lentils, kidney beans, and Indian spices in a creamy tomato-based sauce",
-        itemprice: 129.99,
+        itemprice: 29.99,
         itemimage: "https://th.bing.com/th/id/OIG.p_rQ5jEyGFDk4RKPb_cm?w=1024&h=1024&rs=1&pid=ImgDetMain",
         uniqueid: 7,
     },
     {
         itemname: "Malai kofta",
         itemdisc: " A vegetarian dish made with vegetable balls in a creamy tomato-based sauce",
-        itemprice: 229.99,
+        itemprice: 29.99,
         itemimage: "https://th.bing.com/th/id/OIG.HLQcbn.D.lDGDRzYkng2?pid=ImgGn",
         uniqueid: 8,
     },
@@ -81,14 +82,10 @@ var productsArray = [
     {
         itemname: "Tandoori chicken",
         itemdisc: "A chicken dish that is marinated in yogurt and spices, then grilled in a tandoor oven",
-        itemprice: 159.99,
+        itemprice: 29.99,
         itemimage: "https://th.bing.com/th/id/OIG.SSOQQpmyISVRonJzcT52?pid=ImgGn",
         uniqueid: 10,
     },
-    
-];
-
-var productsArray1 = [
     {
         itemname: "Coq au Vin",
         itemdisc: "Classic French dish with chicken braised in red wine, bacon, mushrooms, and garlic.",
@@ -158,10 +155,7 @@ var productsArray1 = [
         itemprice: 500,
         itemimage: "https://th.bing.com/th/id/OIG.JQ8vIxRZhZR75UgV8_DQ?pid=ImgGn",
         uniqueid: 20,
-    }
-];
-
-var productsArray2 =[
+    },
     {
         itemname: "Peking Duck",
         itemdisc: "Famous Beijing dish made with roasted duck, served with thin pancakes, scallions, and hoisin sauce.",
@@ -232,9 +226,6 @@ var productsArray2 =[
         itemimage: "https://th.bing.com/th/id/OIG.2uK8jdYnIdhH_Im6CQQi?pid=ImgGn",
         uniqueid: 30,
     },
-];
-
-var productsArray3 = [
     {
         itemname: "Risotto",
         itemdisc: "A creamy and rich rice dish that is cooked slowly in broth and can be prepared in an infinite number of ways.",
@@ -305,9 +296,6 @@ var productsArray3 = [
         itemimage: "https://th.bing.com/th/id/OIG.9OkFyYuIYUXaB4s2Zuxy?pid=ImgGn",
         uniqueid: 40,
     },
-];
-
-var productsArray4 = [
     {
         itemname: "Chicken and Veggie Quesadillas",
         itemdisc: "Cheese-filled tortillas with chicken, corn, black beans, and salsa, grilled or fried until golden and crispy.",
@@ -377,87 +365,84 @@ var productsArray4 = [
         itemprice: 100,
         itemimage: "https://th.bing.com/th/id/OIG.t8Ds6RpEVzGrgqqf5FJh?pid=ImgGn",
         uniqueid: 50,
-    }
+    },
+    {
+        itemname: "Sushi",
+        itemdisc: "A dish made of vinegared rice and fresh fish, presented in a number of ways and shapes ",
+        itemprice: 250,
+        itemimage: "https://th.bing.com/th/id/OIG.mhTh.2.SioWQDksfx3uJ?w=1024&h=1024&rs=1&pid=ImgDetMain",
+        uniqueid: 51,
+    },
+    {
+        itemname: "Tempura",
+        itemdisc: ": A dish of battered and fried fish, seafood, or vegetables. Every piece is a bite of crisply fried perfection ",
+        itemprice: 250,
+        itemimage: "https://th.bing.com/th/id/OIG.5bpJp0hZKgwsxuCgl9Fh?pid=ImgGn",
+        uniqueid: 52,
+    },
+    {
+        itemname: "Yakitori",
+        itemdisc: "A dish of bite-sized cuts of chicken grilled on a skewer. It makes use of every part of the chicken, including heart, liver, and even chicken comb ",
+        itemprice: 250,
+        itemimage: "https://th.bing.com/th/id/OIG.v3hVSJI_e8zgJlsSy8c3?w=1024&h=1024&rs=1&pid=ImgDetMain",
+        uniqueid: 53,
+    },
 
-];
-var productsArray5 = [
-        {
-            itemname: "Sushi",
-            itemdisc: "A dish made of vinegared rice and fresh fish, presented in a number of ways and shapes ",
-            itemprice: 330,
-            itemimage: "https://th.bing.com/th/id/OIG.mhTh.2.SioWQDksfx3uJ?w=1024&h=1024&rs=1&pid=ImgDetMain",
-            uniqueid: 51,
-        },
-        {
-            itemname: "Tempura",
-            itemdisc: ": A dish of battered and fried fish, seafood, or vegetables. Every piece is a bite of crisply fried perfection ",
-            itemprice: 250,
-            itemimage: "https://th.bing.com/th/id/OIG.5bpJp0hZKgwsxuCgl9Fh?pid=ImgGn",
-            uniqueid: 52,
-        },
-        {
-            itemname: "Yakitori",
-            itemdisc: "A dish of bite-sized cuts of chicken grilled on a skewer. It makes use of every part of the chicken, including heart, liver, and even chicken comb ",
-            itemprice: 150,
-            itemimage: "https://th.bing.com/th/id/OIG.v3hVSJI_e8zgJlsSy8c3?w=1024&h=1024&rs=1&pid=ImgDetMain",
-            uniqueid: 53,
-        },
-    
-        {
-            itemname: "Tsukemono",
-            itemdisc: "Traditional pickles that have been eaten in Japan since prehistoric times. Made with a wide variety of ingredients, including vegetables like daikon radish and eggplant, as well as fruits like ume plum ",
-            itemprice: 430,
-            itemimage: "https://th.bing.com/th/id/OIG.i0S_f2Nr1ar2Fkc0JIDa?pid=ImgGn",
-            uniqueid: 54,
-        },
-    
-        {
-            itemname: "Kaiseki",
-            itemdisc: "Kaiseki: A tasting course comprised of small, seasonally themed dishes crafted with the utmost precision and attention to detail",
-            itemprice: 450,
-            itemimage: "https://th.bing.com/th/id/OIG.bmD76iK_ZLSnTS0Kxky6?w=1024&h=1024&rs=1&pid=ImgDetMain",
-            uniqueid: 55,
-        },
-    
-        {
-            itemname: "Unagi",
-            itemdisc: "A freshwater eel that is grilled and served with a sweet and savory sauce ",
-            itemprice: 450,
-            itemimage: "https://th.bing.com/th/id/OIG._LJU7rua8PybukIK5krX?w=1024&h=1024&rs=1&pid=ImgDetMain",
-            uniqueid: 56,
-        },
-    
-        {
-            itemname: "Soba",
-            itemdisc: "Thin noodles made from buckwheat flour, often served cold with a dipping sauce",
-            itemprice: 325,
-            itemimage: "https://th.bing.com/th/id/OIG.5N_hkwshZIyAkp_exOZX?pid=ImgGn",
-            uniqueid: 57,
-        },
-    
-        {
-            itemname: "Udon",
-            itemdisc: "Udon: Thick, chewy noodles made from wheat flour, often served in a hot soup",
-            itemprice: 300,
-            itemimage: "https://th.bing.com/th/id/OIG.CSfGrz3_a4lFVkB7hPin?pid=ImgGn",
-            uniqueid: 58,
-        },
-    
-        {
-            itemname: "Okonomiyaki:",
-            itemdisc: " A savory pancake made with flour, eggs, shredded cabbage, and a variety of other ingredients, often topped with a sweet and savory sauce",
-            itemprice: 225,
-            itemimage: "https://th.bing.com/th/id/OIG.LjURdT0PFmJh0qmyVKVK?pid=ImgGn",
-            uniqueid: 59,
-        },
-    
-        {
-            itemname: "Onigiri",
-            itemdisc: "A rice ball that is often filled with pickled plum, salmon, or other ingredients, and wrapped in seaweed ",
-            itemprice: 340,
-            itemimage: "https://th.bing.com/th/id/OIG.8mLAatuBxvdggHkzTPhF?w=1024&h=1024&rs=1&pid=ImgDetMain",
-            uniqueid: 60,
-        }
+    {
+        itemname: "Tsukemono",
+        itemdisc: "Traditional pickles that have been eaten in Japan since prehistoric times. Made with a wide variety of ingredients, including vegetables like daikon radish and eggplant, as well as fruits like ume plum ",
+        itemprice: 250,
+        itemimage: "https://th.bing.com/th/id/OIG.i0S_f2Nr1ar2Fkc0JIDa?pid=ImgGn",
+        uniqueid: 54,
+    },
+
+    {
+        itemname: "Kaiseki",
+        itemdisc: "Kaiseki: A tasting course comprised of small, seasonally themed dishes crafted with the utmost precision and attention to detail",
+        itemprice: 250,
+        itemimage: "https://th.bing.com/th/id/OIG.bmD76iK_ZLSnTS0Kxky6?w=1024&h=1024&rs=1&pid=ImgDetMain",
+        uniqueid: 55,
+    },
+
+    {
+        itemname: "Unagi",
+        itemdisc: "A freshwater eel that is grilled and served with a sweet and savory sauce ",
+        itemprice: 250,
+        itemimage: "https://th.bing.com/th/id/OIG._LJU7rua8PybukIK5krX?w=1024&h=1024&rs=1&pid=ImgDetMain",
+        uniqueid: 56,
+    },
+
+    {
+        itemname: "Soba",
+        itemdisc: "Thin noodles made from buckwheat flour, often served cold with a dipping sauce",
+        itemprice: 250,
+        itemimage: "https://th.bing.com/th/id/OIG.5N_hkwshZIyAkp_exOZX?pid=ImgGn",
+        uniqueid: 57,
+    },
+
+    {
+        itemname: "Udon",
+        itemdisc: "Udon: Thick, chewy noodles made from wheat flour, often served in a hot soup",
+        itemprice: 250,
+        itemimage: "https://th.bing.com/th/id/OIG.CSfGrz3_a4lFVkB7hPin?pid=ImgGn",
+        uniqueid: 58,
+    },
+
+    {
+        itemname: "Okonomiyaki:",
+        itemdisc: " A savory pancake made with flour, eggs, shredded cabbage, and a variety of other ingredients, often topped with a sweet and savory sauce",
+        itemprice: 250,
+        itemimage: "https://th.bing.com/th/id/OIG.LjURdT0PFmJh0qmyVKVK?pid=ImgGn",
+        uniqueid: 59,
+    },
+
+    {
+        itemname: "Onigiri",
+        itemdisc: "A rice ball that is often filled with pickled plum, salmon, or other ingredients, and wrapped in seaweed ",
+        itemprice: 250,
+        itemimage: "https://th.bing.com/th/id/OIG.8mLAatuBxvdggHkzTPhF?w=1024&h=1024&rs=1&pid=ImgDetMain",
+        uniqueid: 60,
+    },
 ];
 
 function save(uniqueid) {
