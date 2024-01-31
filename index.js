@@ -17,7 +17,7 @@ $demo.addEventListener('click', () => {
         $demo.classList.add('s--reverting');
 
         // After the animation, navigate to the desired link
-        window.location.href = "index.html";
+        window.location.href = "order.html";
     });
 
     setTimeout(() => {
